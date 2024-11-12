@@ -11,3 +11,4 @@
 ## 3. HLD (High-Level Design)
 
    - [View High-Level Design PDF](./public/YouTube_HLD.drawio.pdf)
+    ![Alt text](./public/YouTube_HLD.drawio.pdf)
