@@ -10,4 +10,4 @@
 
 ## 3. HLD (High-Level Design)
 
-   - [View High-Level Design PDF](./public/YouTube-HLD.drawio.pdf)
+   - [View High-Level Design PDF](./public/YouTube_HLD.drawio.pdf)
