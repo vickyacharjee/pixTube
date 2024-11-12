@@ -1,10 +1,13 @@
 # Machine Coding 
-##    1. Features of the project [YOUTUBE]
-##    2. Tech-Stack [Tailwind for styling, Redux for state management/ContextApi/bundler/Router] Clarify and    justify each and everything why we are opting 
-##    3. HLD:
+## 1. Features of the Project [YOUTUBE]
+## 2. Tech-Stack
+   - **Tailwind** for styling
+   - **Redux** for state management / **Context API**
+   - **Bundler**
+   - **Router**
 
-    [Link text](./public/YouTube-HLD.drawio.pdf)
+   Clarify and justify each choice.
 
-<iframe src="./public/YouTube-HLD.drawio.pdf" width="100%" height="500px"></iframe>
+## 3. HLD (High-Level Design)
 
-
+   - [View High-Level Design PDF](./public/YouTube-HLD.drawio.pdf)
