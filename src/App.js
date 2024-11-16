@@ -1,25 +1,108 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import Body from "./components/Body";
+import Header from "./components/Header";
+import appStore from "./store/appStore";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainContainer from "./components/MainContainer";
+import WatchPage from "./components/WatchPage";
+import Error from "./components/Error";
+import ContentList from "./components/ContentList";
+import Test from "./components/Test";
 
 function App() {
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <Header />
+          <Body />
+        </>
+      ),
+      errorElement: <Error />,
+      children: [
+        {
+          path: "/",
+          element: <MainContainer />,
+        },
+        {
+          path: "/watch",
+          element: <WatchPage />,
+        },
+        {
+          path: "/search",
+          element: <ContentList />,
+        },
+        {
+          path: "/test",
+          element: <Test/>,
+        },
+      ],
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={appStore}>
+      <RouterProvider router={appRouter} />
+    </Provider>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Provider } from "react-redux";
+// import Body from "./components/Body";
+// import Header from "./components/Header";
+// import appStore from "./store/appStore";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import MainContainer from "./components/MainContainer";
+// import WatchPage from "./components/WatchPage";
+// import Error from "./components/Error";
+// import ContentList from "./components/ContentList";
+
+// function App() {
+//   const appRouter=createBrowserRouter([{
+//     path:"/",
+//     element:<Body/>,
+//     errorElement:<Error/>,
+//     children:[
+//       {
+//         path:"/",
+//         element:<MainContainer/>
+//       },
+//       {
+//         path:"/watch",
+//         element:<WatchPage/>
+//       },
+//       {
+//         path:"/search",
+//         element:<ContentList/>
+//       },
+
+//     ]
+//   }])
+//   return (
+//     <div>
+//       <Provider store={appStore}>
+//           <Header/>
+//           <RouterProvider router={appRouter}/>
+//       </Provider>
+//     </div>
+//   );
+// }
+
+// export default App;
