@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import { addMessage } from '../store/chatSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 
 const ChatInput = () => {
     const dispatch=useDispatch();
+    let showName=useSelector(store=>store.app.showProfile);
 
     const [message,setMessage]=useState('');
 
     const handleAddMessage=()=>{
             dispatch(addMessage({
-                name:"vicky",
+                name:showName ? showName : "unknown",
                 message:message
             }))
             setMessage('')

@@ -3,6 +3,8 @@ import React from 'react'
 const VideoDisplayContainer = ({info}) => {
     const {snippet}=info;
     const {thumbnails,title,channelTitle,description}=snippet;
+    console.log(info);
+    
   return (
     <div className=' m-10'> 
         <div className='flex items-center'>

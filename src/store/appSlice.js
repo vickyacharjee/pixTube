@@ -4,7 +4,9 @@ const appSlice=createSlice({
     name:'app',
     initialState:{
         isMenu:true,
-        list:[]
+        list:null,
+        showProfile:null,
+        isProfile:false,
     },
     reducers:{
         toggleMenu:(state)=>{
@@ -14,11 +16,21 @@ const appSlice=createSlice({
             state.isMenu=false;
         },
         addList:(state,action)=>{
-             state.list.push(action.payload) 
+             state.list=action.payload
+        },
+        addProfile:(state,action)=>{
+            state.showProfile=action.payload
+        },
+        toggleProfile:(state)=>{
+            state.isProfile=!state.isProfile
+        },
+        removeProfile:(state)=>{
+            state.showProfile=null;
         }
+
 
     }
 })
 
-export const {toggleMenu,closeMenu,addList}=appSlice.actions;
+export const {toggleMenu,closeMenu,addList,addProfile,toggleProfile,removeProfile}=appSlice.actions;
 export default appSlice.reducer;
