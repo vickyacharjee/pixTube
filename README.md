@@ -31,6 +31,16 @@ PixTube is a YouTube-inspired web application designed to provide users with a s
    git clone https://github.com/your-username/pixtube.git
    cd pixtube
 
+   install dependencies:
+   npm install
+
+   Start the development server:
+   npm start
+
+   open Your browser and navigate to:
+   http://localhost:3000
+
+
 
 
 
